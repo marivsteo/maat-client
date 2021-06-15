@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/home";
 import Error from "./components/error";
 import About from "./components/about";
@@ -34,48 +34,50 @@ function App() {
 	}, []);
 
 	return (
-		<div>
-			<Header username={username} setUsername={setUsername} />
-			<div className="min-h-screen flex-grow">
-				<Switch>
-					<Route path="/" exact>
-						<Home username={username} />
-					</Route>
-					<Route path="/about" exact>
-						<About />
-					</Route>
-					<Route path="/signup" exact>
-						<Signup />
-					</Route>
-					<Route path="/login" exact>
-						<Login setUsername={setUsername} />
-					</Route>
-					<Route path="/events" exact>
-						<Events username={username} />
-					</Route>
-					<Route path="/profile" exact>
-						<Profile />
-					</Route>
-					<Route path="/add_event" exact>
-						<AddEvent />
-					</Route>
-					<Route path="/my_events" exact>
-						<MyEvents />
-					</Route>
-					<Route path="/created_by_me" exact>
-						<EventsCreatedByMe />
-					</Route>
-					<Route path="/participating" exact>
-						<ParticipatingEvents />
-					</Route>
-					<Route path="/event/:id">
-						<EventPage />
-					</Route>
-					<Route component={Error} />
-				</Switch>
+		<Router>
+			<div>
+				<Header username={username} setUsername={setUsername} />
+				<div className="min-h-screen flex-grow">
+					<Switch>
+						<Route path="/" exact>
+							<Home username={username} />
+						</Route>
+						<Route path="/about" exact>
+							<About />
+						</Route>
+						<Route path="/signup" exact>
+							<Signup />
+						</Route>
+						<Route path="/login" exact>
+							<Login setUsername={setUsername} />
+						</Route>
+						<Route path="/events" exact>
+							<Events username={username} />
+						</Route>
+						<Route path="/profile" exact>
+							<Profile />
+						</Route>
+						<Route path="/add_event" exact>
+							<AddEvent />
+						</Route>
+						<Route path="/my_events" exact>
+							<MyEvents />
+						</Route>
+						<Route path="/created_by_me" exact>
+							<EventsCreatedByMe />
+						</Route>
+						<Route path="/participating" exact>
+							<ParticipatingEvents />
+						</Route>
+						<Route path="/event/:id">
+							<EventPage />
+						</Route>
+						<Route component={Error} />
+					</Switch>
+				</div>
+				<Footer />
 			</div>
-			<Footer />
-		</div>
+		</Router>
 	);
 }
 
