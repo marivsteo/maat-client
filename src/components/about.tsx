@@ -27,7 +27,7 @@ const features = [
 	{
 		name: "Be healthier and more active",
 		description:
-			"It's important to be active. We won't quote fancy studies that show how exercising improves your life, but we all know the truth. We created Maat because we love sports (and we love you too, but don't tell anybody ❤)",
+			"It's important to be active. We won't quote fancy studies that show how exercising improves your life, but we all know the truth. We created Maat because we love sports (and we love you too, but don't tell anybody ❤).",
 		icon: LightningBoltIcon,
 	},
 	{
