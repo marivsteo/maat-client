@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/aa1030f5-3f04-4a7d-a4cd-ad5419302ca8/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/maat",
+    "appService.deploySubpath": "build"
+}
