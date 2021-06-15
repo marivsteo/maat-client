@@ -75,7 +75,7 @@ function App() {
 						<Route component={Error} />
 					</Switch>
 				</div>
-				{/* <Footer /> */}
+				<Footer />
 			</div>
 		</Router>
 	);
