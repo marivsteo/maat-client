@@ -6,6 +6,7 @@ import Pagination from "./pagination";
 import { IUser } from "../interfaces/IUser";
 import { ISportEvent } from "../interfaces/ISportEvent";
 import { url } from "../resources/constants";
+import { NavLink } from "react-router-dom";
 
 export default function ParticipatingEvents(props: any) {
 	const [events, setEvents] = useState([]);
@@ -30,6 +31,7 @@ export default function ParticipatingEvents(props: any) {
 					</h2>
 				</div>
 			</div>
+			{events.length === 0 ? (<div className="mx-10"><img className="mt-10 mx-auto" src={`/images/Open Doodles - Petting.png`} alt="" /><p className="mt-10 max-w-2xl text-xl text-gray-500 lg:mx-auto">You don't participate in any event. Check available events in the <NavLink to="/events" className="text-primary">Events</NavLink> page, participate in them and check back here.</p></div>) : (null)}
 			<div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-1 mx-auto">
 				{events.map((event: ISportEvent) => {
 					return <Event key={event.name} sportEvent={event}></Event>;

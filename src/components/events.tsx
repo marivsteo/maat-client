@@ -26,6 +26,7 @@ export default function Events(props: any) {
 	return (
 		<div>
 			<Heading username={props.username}></Heading>
+			{events.length === 0 ? (<div className="mx-10"><img className="mt-10 mx-auto" src={`/images/Open Doodles - Petting.png`} alt="" /><p className="mt-10 max-w-2xl text-xl text-gray-500 lg:mx-auto">There aren't any available events right now. Please check back later.</p></div>) : (null)}
 			<div className="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-1 mx-auto">
 				{events.map((event: ISportEvent) => {
 					return (
