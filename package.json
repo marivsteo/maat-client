@@ -14,6 +14,7 @@
     "@types/node": "^12.20.3",
     "@types/react": "^17.0.2",
     "@types/react-dom": "^17.0.1",
+    "gh-pages": "^3.2.3",
     "react": "^17.0.1",
     "react-datepicker": "^3.8.0",
     "react-dom": "^17.0.1",
@@ -23,6 +24,8 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
@@ -55,5 +58,6 @@
     "postcss": "^7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
     "tailwindcss-font-inter": "^2.0.5"
-  }
+  },
+  "homepage": "https://marivsteo.github.io/maat-client"
 }
